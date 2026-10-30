@@ -1,39 +1,34 @@
 @echo off
 setlocal
 echo ============================================================
-echo [1/3] Versiyon Guncelleniyor...
+echo   Gelesiye Win64 (Debug) Derleme Araci
 echo ============================================================
-python "%~dp0update_version.py" %*
-if %errorlevel% neq 0 (
-    echo [HATA] Versiyon guncelleme basarisiz!
-    exit /b %errorlevel%
+echo.
+
+set "SCRIPT_DIR=%~dp0"
+set "ROOT_DIR=%SCRIPT_DIR%..\"
+
+if not defined BDS (
+    if exist "C:\Program Files (x86)\Embarcadero\Studio\23.0\bin\rsvars.bat" (
+        call "C:\Program Files (x86)\Embarcadero\Studio\23.0\bin\rsvars.bat"
+    )
 )
 
-echo.
-echo ============================================================
-echo [2/3] Kodlama ve BOM Denetleniyor...
-echo ============================================================
-python "%~dp0check_encoding.py" --fix
-if %errorlevel% neq 0 (
-    echo [HATA] Kodlama hatasi tespit edildi!
-    exit /b %errorlevel%
+echo [1/2] Kaynak Dosyalari Hazirlaniyor...
+if exist "%ROOT_DIR%Gelesiye.rc" (
+    brcc32 "%ROOT_DIR%Gelesiye.rc" -fo"%ROOT_DIR%Gelesiye.res" >nul 2>&1
 )
 
-echo.
-echo ============================================================
-echo [3/3] MSBuild Win64 Derleniyor...
-echo ============================================================
-call "C:\Program Files (x86)\Embarcadero\Studio\23.0\bin\rsvars.bat"
-if exist "%~dp0..\Gelesiye.rc" (
-    brcc32 "%~dp0..\Gelesiye.rc" -fo"%~dp0..\Gelesiye.res" >nul
-)
-msbuild "%~dp0..\Gelesiye.dproj" /t:Build /p:Config=Debug /p:Platform=Win64
+echo [2/2] MSBuild Win64 (Debug) Derleniyor...
+msbuild "%ROOT_DIR%Gelesiye.dproj" /t:Build /p:Config=Debug /p:Platform=Win64 /nologo /v:minimal
 if %errorlevel% neq 0 (
+    echo.
     echo [HATA] Derleme basarisiz oldu!
     exit /b %errorlevel%
 )
 
 echo.
 echo ============================================================
-echo [BASARILI] Gelesiye Win64 basariyla derlendi! (bin\Debug\Gelesiye.exe)
+echo [BASARILI] Gelesiye Win64 Debug basariyla derlendi!
+echo Konum: bin\Debug\Gelesiye.exe
 echo ============================================================

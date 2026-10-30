@@ -10,8 +10,8 @@ const
   GELESIYE_VER_STRING    = '1.0.0';
   GELESIYE_SEMVER        = 'v1.0.0';
   GELESIYE_GIT_BRANCH    = 'master';
-  GELESIYE_GIT_COMMIT    = '0bc5c20*';
-  GELESIYE_BUILD_TIME    = '21.09.2026 13:30:58';
+  GELESIYE_GIT_COMMIT    = 'fef3422';
+  GELESIYE_BUILD_TIME    = '31.10.2026 02:17:55';
   GELESIYE_IS_RELEASE    = True;
   GELESIYE_APP_TITLE     = 'Gelesiye — Basit Veresiye Takip';
 

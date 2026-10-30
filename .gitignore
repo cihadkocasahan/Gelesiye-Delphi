@@ -15,6 +15,7 @@ dcu/
 bin/
 releases/*Beta*.exe
 !releases/Gelesiye_Setup_x64.exe
+!releases/Gelesiye_Setup_Debug_x64.exe
 *.rsm
 scratch/
 .kiro/

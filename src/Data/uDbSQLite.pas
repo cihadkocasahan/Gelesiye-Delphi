@@ -1,4 +1,4 @@
-unit uDbSQLite;
+﻿unit uDbSQLite;
 
 interface
 

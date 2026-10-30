@@ -23,6 +23,10 @@
 #define MyAppURL "https://github.com/delphi/Gelesiye"
 #define MyAppExeName "Gelesiye.exe"
 
+#ifndef SourceDir
+  #define SourceDir "..\bin\Release"
+#endif
+
 [Setup]
 ; App Identity
 AppId={{D4E5F6A7-B8C9-0D1E-2F3A-4B5C6D7E8F90}
@@ -109,7 +113,7 @@ Name: "{app}\assets\icons"
 
 [Files]
 ; Main Executable
-Source: "..\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#SourceDir}\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 ; Icons and Assets
 Source: "..\assets\icons\*"; DestDir: "{app}\assets\icons"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; HTML Documentation / User Manual
