@@ -1,28 +1,9 @@
-# Gelesiye Delphi - Kaynak Kod & Kullanım Lisansı (Non-Commercial License)
+# Lisans
 
-Telif Hakkı (c) 2026 Cihad Kocaaşahan / Gelesiye Projesi. Tüm Hakları Saklıdır.
+Telif Hakkı (c) 2026 Cihad Kocaaşahan
 
-Bu yazılımın kaynak kodları ve ikili (binary) dağıtımları aşağıdaki şartlar dahilinde
-ücretsiz olarak görüntülenebilir, incelenebilir, öğrenim amacıyla kullanılabilir
-ve bireysel ya da şirket içi cari takip süreçlerinde işletilebilir:
+Bu proje kişisel, eğitim ve kurum içi kullanım için ücretsizdir.
 
-1. **Ücretsiz Kullanım Hakkı:** 
-   Yazılımı ve derlenmiş kurulum paketini ticari bir amaçla satmamak kaydıyla; 
-   şirketinizde, iş yerinizde veya şahsi bilgisayarınızda ücretsiz olarak indirebilir, 
-   kurabilir ve sınırsız süreyle kullanabilirsiniz.
-
-2. **Kaynak Kodu ve İnceleme:** 
-   Yazılımın kaynak kodlarını inceleyebilir, eğitim amaçlı referans alabilir, 
-   hata düzeltmeleri yapabilir veya kendi iç kullanımınız için çatallayarak (fork) geliştirebilirsiniz.
-
-3. **TİCARİ SATIŞ VE PAZARLAMA YASAĞI (NON-COMMERCIAL):**
-   - Bu yazılımın, kaynak kodlarının veya bunlardan türetilen herhangi bir türevinin 
-     doğrudan veya dolaylı olarak üçüncü kişilere satışı, lisanslanması, kiralanması 
-     veya ücret karşılığı dağıtılması KESİNLİKLE YASAKTIR.
-   - Bu yazılım veya kaynak kodları, ücretli bir ticari ürün, SaaS (hizmet olarak yazılım) 
-     veya paralı danışmanlık paketinin bir parçası olarak üçüncü taraflara pazarlanamaz.
-
-4. **SORUMLULUK REDDİ:**
-   BU YAZILIM "OLDUĞU GİBİ" (AS-IS) SAĞLANMIŞTIR. YAZILIMIN KULLANIMINDAN KAYNAKLANABİLECEK 
-   HERHANGİ BİR DOĞRUDAN VEYA DOLAYLI ZARARDAN, VERİ KAYBINDAN VEYA TİCARİ KESİNTİLERDEN 
-   GELİŞTİRİCİLER HİÇBİR ŞEKİLDE SORUMLU TUTULAMAZ.
+- Kaynak kodları inceleyebilir, öğrenme amacıyla referans alabilir ve kendi günlük ihtiyaçlarınız için kullanabilirsiniz.
+- Yazılımın veya kodlarının ticari olarak satışı, kiralanması veya ücretli dağıtımı yapılamaz.
+- Yazılım herhangi bir garanti olmaksızın "olduğu gibi" sağlanır.

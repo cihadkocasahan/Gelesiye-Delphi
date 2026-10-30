@@ -101,6 +101,4 @@ scripts\build_setup.bat
 
 ## 📄 Lisans
 
-Bu proje **Ticari Olmayan Kaynak Açık Lisans (Non-Commercial Source-Available License)** ile korunmaktadır.
-
-Kodları inceleyebilir, eğitim veya şirket içi günlük ihtiyaçlarınız için tamamen ücretsiz olarak kullanabilirsiniz. Ancak ticari amaçla satışı, kiralanması veya ücretli olarak üçüncü şahıslara dağıtılması kesinlikle yasaktır. Detaylar için [LICENSE](LICENSE) dosyasını inceleyiniz.
+Bu proje kişisel, eğitim ve şirket içi kullanım için ücretsizdir. Ticari amaçla satışı veya ücretli dağıtımı yapılamaz. Detaylar için [LICENSE](LICENSE) dosyasına bakabilirsiniz.
