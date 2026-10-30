@@ -1,0 +1,34 @@
+# Delphi compiler output & temporary files
+__history/
+__recovery/
+*.dcu
+dcu/
+*.identcache
+*.local
+*.stat
+*.tvsconfig
+*.dsk
+*.~*
+*.tmp
+
+# Exclude generated build artifacts
+bin/
+releases/*Beta*.exe
+!releases/Gelesiye_Setup_x64.exe
+*.rsm
+scratch/
+.kiro/
+.agents/
+
+# Database binary files (schema.sql is preserved)
+*.db
+*.sqlite
+*.sqlite3
+*.fdb
+*.FDB
+
+# Generated version resource files
+Gelesiye_Version.*
+
+# AI agent instructions (local only)
+AGENTS.md

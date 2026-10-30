@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gelesiye — Basit Veresiye Takip | Kullanım Kılavuzu</title>
+  <style>
+    :root {
+      --primary: #0284C7;
+      --primary-dark: #0369A1;
+      --header-bg: #0F172A;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --text: #1E293B;
+      --text-muted: #64748B;
+      --success: #16A34A;
+      --danger: #DC2626;
+      --warning: #EA580C;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      padding: 36px 32px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+    .app-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #38BDF8;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+    .app-subtitle {
+      font-size: 18px;
+      color: #E2E8F0;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .slogan-card {
+      background: rgba(56, 189, 248, 0.12);
+      border-left: 4px solid #38BDF8;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-style: italic;
+      color: #F0F9FF;
+      font-weight: 600;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--header-bg);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    p { margin-bottom: 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background-color: #F8FAFC;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+    tr:hover { background-color: #F8FAFC; }
+    .kbd {
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0F172A;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+      font-family: monospace;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .badge-danger { background: #FEE2E2; color: #991B1B; }
+    .badge-success { background: #DCFCE7; color: #166534; }
+    .badge-primary { background: #E0F2FE; color: #075985; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .contact-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      background: #FAFAFA;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+    .contact-card:hover {
+      border-color: var(--primary);
+      background: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+    }
+    .contact-card .title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    @media print {
+      body { background: #FFF; padding: 0; }
+      .card { border: none; box-shadow: none; padding: 12px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="app-title">Gelesiye</div>
+      <div class="app-subtitle">Basit Veresiye Takip Programı</div>
+      <div class="slogan-card">
+        "Verme veresiye beklersin gelesiye, madem verdin veresiye sana lazım Gelesiye!"
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="card-title">🚀 Hızlı Başlangıç</div>
+      <p><strong>Gelesiye</strong>; karmaşık muhasebe modülleriyle vakit kaybetmeden esnaf, toptancı, perakendeci ve serbest çalışanların borç-alacak kayıtlarını en sade, en pratik şekilde tutabilmesi için tasarlanmıştır.</p>
+      <ul style="padding-left: 20px; line-height: 1.8;">
+        <li><strong>Giriş Şifresi:</strong> Program açılışında güvenlik şifresi varsayılan olarak <span class="kbd">gel</span> olarak tanımlıdır. <em>(Ayarlar menüsünden dilediğiniz zaman değiştirebilirsiniz.)</em></li>
+        <li><strong>İlk Müşteriyi Ekleyin:</strong> Ana ekranda <span class="kbd">F2</span> tuşuna basarak veya <strong>"Yeni Cari Ekle"</strong> butonuna tıklayarak ilk müşterinizi tanımlayın.</li>
+        <li><strong>Hareketleri Görün:</strong> Cari listesinden müşteriye çift tıklayarak veya <span class="kbd">Enter</span> tuşuna basarak müşteri hareket ekstresine geçin.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⚡ Hızlı Fiş Girişi & Kısayol Tuşları</div>
+      <p>Müşteri hareket sayfasındayken tek bir tuşla anında fiş oluşturabilirsiniz:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Kısayol</th>
+            <th>Fiş Türü</th>
+            <th>İşlem Anlamı</th>
+            <th>Etki</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="kbd">F5</span></td>
+            <td><span class="badge badge-danger">Borç Dekontu</span></td>
+            <td>Müşteriye veresiye mal/hizmet satışı yapıldığında</td>
+            <td>Müşterinin borcu artar (+)</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">F6</span></td>
+            <td><span class="badge badge-success">Tahsilat</span></td>
+            <td>Müşteriden nakit, havale veya kredi kartı ile para alındığında</td>
+            <td>Müşterinin borcu düşer (-)</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">F7</span></td>
+            <td><span class="badge badge-primary">Alacak Dekontu</span></td>
+            <td>İade alınan ürünler veya müşteriye borçlanılan durumlar</td>
+            <td>Müşteri alacağı artar (-)</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">F8</span></td>
+            <td><span class="badge badge-danger">Ödeme</span></td>
+            <td>Tedarikçiye ödeme yapıldığında veya müşteriye iade ödemesi</td>
+            <td>Bakiye dengesi artar (+)</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">Esc</span></td>
+            <td><span class="kbd">Geri Dön</span></td>
+            <td>Hareket sayfasından ana Cari Listesine tek tuşla dönüş</td>
+            <td>Listeye döner</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">←</span> / <span class="kbd">→</span></td>
+            <td><span class="kbd">Önceki / Sonraki</span></td>
+            <td>Listeye dönmeden önceki veya sonraki carinin ekstresine geçiş</td>
+            <td>Hızlı gezinme</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔍 Akıllı Arama &amp; Filtreler</div>
+      <p>Gelesiye, arama yaparken sonuçları önem sırasına göre dizer:</p>
+      <ol style="padding-left: 20px; line-height: 1.8;">
+        <li><strong>Tam Eşleşenler:</strong> Aradığınız kelimeyle birebir eşleşen cariler en üstte listelenir.</li>
+        <li><strong>Bununla Başlayanlar:</strong> Kelimeyle başlayan kayıtlar ikinci öncelikte yer alır.</li>
+        <li><strong>İçerenler:</strong> Kelimenin unvan içerisinde herhangi bir yerde geçtiği kayıtlar devamında gösterilir.</li>
+      </ol>
+      <p style="margin-top: 14px;">Arama çubuğunun yanındaki seçeneklerle filtrelemeyi daraltabilirsiniz:</p>
+      <ul style="padding-left: 20px; line-height: 2.0; margin-top: 6px;">
+        <li><strong>Arama Yöntemi:</strong> <em>Yazıldığı Gibi</em> (önek eşleşmesi) veya <em>İçerenleri Ara</em> (tam metin).</li>
+        <li><strong>Hesap Durumu:</strong> Tümü / Aktif / Pasif cari filtrelemesi.</li>
+        <li><strong>Bakiye Filtresi:</strong> Tümü · Borçlular · Alacaklılar · 🔢 Sıfır Olmayanlar · Bakiyesi Sıfır · ⚠ Limit Aşanlar.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🖱️ Sağ Tık (Bağlam) Menüleri</div>
+      <p>Fare kullanımını seven kullanıcılar için hem <strong>Cari Listesi</strong> hem de <strong>Müşteri Hareketleri</strong> tablolarında zengin sağ tık menüsü mevcuttur:</p>
+      <ul style="padding-left: 20px; line-height: 1.9;">
+        <li><strong>Cari Listesinde Sağ Tık:</strong> Hesap Ekstresini Aç, İşlem Ekle (Borç Fişi, Tahsilat, Alacak, Ödeme), Kartı Düzenle/Sil, Yeni Cari Ekle, Liste Toplamları ve Liste Raporlarını Yazdır.</li>
+        <li><strong>Hareket Listesinde Sağ Tık:</strong> Makbuz / Dekont Yazdır, İşlemi Düzenle/Sil, Yeni İşlem Ekle, Hesap Ekstresi Yazdır ve Listeyi Yenile.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🖨️ Makbuz, Ekstre ve Rapor Yazdırma (FastReport)</div>
+      <p>Gelesiye, modern ve şık FastReport altyapısıyla profesyonel çıktılar üretir:</p>
+      <ul style="padding-left: 20px; line-height: 1.9;">
+        <li><strong>Tahsilat &amp; Ödeme Makbuzu / Dekont:</strong> Yapılan işlemin tutarı, yazıyla açıklaması, <em>İşlem Öncesi Bakiye</em> ve <em>İşlem Sonrası Kalan Bakiye</em> bilgileriyle birlikte hazır şablon olarak basılır.</li>
+        <li><strong>Cari Hesap Ekstresi:</strong> Müşterinin tüm borç, alacak ve yürüyen bakiyesini kronolojik sırada listeler.</li>
+        <li><strong>Cari Listesi Raporu:</strong> Tüm carilerin borç-alacak özetlerini veya detaylı dökümlerini tek raporda toplar.</li>
+        <li><strong>Gelişmiş Önizleme:</strong> Yazdırmadan önce ekranda inceleyebilir, doğrudan yazıcıya gönderebilir veya PDF formatında dışa aktarabilirsiniz.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💾 Tercih Hatırlama</div>
+      <p>Gelesiye, kapandığında tüm ekran tercihlerinizi otomatik olarak kaydeder ve bir sonraki açılışta geri yükler:</p>
+      <ul style="padding-left: 20px; line-height: 2.0; margin-top: 10px;">
+        <li><strong>Bakiye Filtresi:</strong> Son seçilen bakiye filtresi (Borçlular, Limit Aşanlar vb.) korunur.</li>
+        <li><strong>Hesap Durumu Filtresi:</strong> Aktif / Pasif / Tümü seçimi hatırlanır.</li>
+        <li><strong>Arama Yöntemi:</strong> Yazıldığı Gibi veya İçerenleri Ara tercihini kaydeder.</li>
+        <li><strong>Sıralama:</strong> Cari listesinde ve hareket listesinde tıkladığınız kolon başlığı ile yön (↑ / ↓) saklanır.</li>
+        <li><strong>Kolon Genişlikleri:</strong> Elle sürüklediğiniz kolon genişlikleri bir sonraki açılışta aynı boyutlarda gelir.</li>
+      </ul>
+      <p style="margin-top: 12px; color: var(--text-muted); font-size: 14px;">Hiçbir ayar yapmanıza gerek yoktur — her şey arka planda otomatik çalışır.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🛡️ Yedekleme & Güvenlik</div>
+      <p>Verileriniz bilgisayarınızda güvenli bir şekilde SQLite veritabanında saklanır. Dilediğiniz an <strong>Dosya &gt; Yedek Al</strong> menüsünden veya otomatik yedekleme seçeneğiyle verilerinizi tek tıkla güvence altına alabilirsiniz.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">👨‍💻 Geliştirici & İletişim</div>
+      <p>Her türlü soru, öneri, özel geliştirme talebi ve destek için doğrudan iletişime geçebilirsiniz:</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="title">Geliştirici</span>
+          <strong>Cihad Kocaşahan</strong>
+          <span style="font-size: 12px; color: var(--text-muted);">Senior Software Developer</span>
+        </div>
+        <div class="contact-card">
+          <span class="title">WhatsApp Destek</span>
+          <a href="https://wa.me/905368888400" target="_blank">+90 536 888 84 00</a>
+        </div>
+        <div class="contact-card">
+          <span class="title">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/cihadkocasahan/" target="_blank">in/cihadkocasahan</a>
+        </div>
+        <div class="contact-card">
+          <span class="title">GitHub</span>
+          <a href="https://github.com/cihadkocasahan" target="_blank">github.com/cihadkocasahan</a>
+        </div>
+        <div class="contact-card">
+          <span class="title">E-Posta</span>
+          <a href="mailto:cihadkocasahan@gmail.com">cihadkocasahan@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2026 Gelesiye — Basit Veresiye Takip. Tüm hakları saklıdır.
+    </footer>
+  </div>
+</body>
+</html>
