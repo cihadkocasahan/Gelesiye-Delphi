@@ -9,12 +9,13 @@ Embarcadero Delphi 12 (Athens) ile **Win64** hedefinde; **MVVM (Model-View-ViewM
 > 
 > **Sorumluluk Reddi (Disclaimer):** Yazılım herhangi bir açık veya zımni garanti verilmeksizin **"olduğu gibi" (AS-IS)** sunulmaktadır. Geliştirici; verilerin kaybı, ticari/finansal hesaplama uyuşmazlıkları, kar kaybı veya bu yazılımın kullanımından doğabilecek doğrudan veya dolaylı hiçbir zarardan sorumlu tutulamaz. Ticari veya kritik iş süreçlerinizde kullanım kararı ve veri yedekleme sorumluluğu tamamen kullanıcıya aittir.
 
-> 🔄 **İki Farklı Teknoloji Yığını, Birebir Aynı İş Mantığı:**  
-> Gelesiye; aynı veritabanı şemasını, aynı domain kurallarını ve aynı kullanıcı deneyimini paylaşan iki kardeş açık kaynak sürüme sahiptir:
-> - 🔷 **[Delphi Edition (Bu Repo)](https://github.com/cihadkocasahan/Gelesiye-Delphi):** Embarcadero Delphi 12, Win64, saf VCL ve OOP mimarisi.
-> - 🔶 **[WPF Edition](https://github.com/cihadkocasahan/Gelesiye-WPF):** Modern .NET 10, C#, XAML ve CommunityToolkit.Mvvm mimarisi.  
+> 🔄 **Üç Farklı Teknoloji Yığını, Birebir Aynı İş Mantığı:**  
+> Gelesiye; aynı domain kurallarını ve finansal veresiye takibi mantığını paylaşan üç kardeş açık kaynak sürüme sahiptir:
+> - 🔷 **[Delphi Edition (Bu Repo)](https://github.com/cihadkocasahan/Gelesiye-Delphi):** Embarcadero Delphi 12, Win64, saf VCL ve OOP masaüstü mimarisi.
+> - 🔶 **[WPF Edition](https://github.com/cihadkocasahan/Gelesiye-WPF):** Modern .NET 10, C#, XAML ve CommunityToolkit.Mvvm masaüstü mimarisi.
+> - 🌐 **[Web & Cloud Edition](https://github.com/cihadkocasahan/Gelesiye-Web):** .NET 10, ABP Framework v9, PostgreSQL, Blazor & WinForms Client.
 > 
-> Her iki proje birlikte incelendiğinde; aynı masaüstü finans probleminin iki farklı modern stack'te ve yapay zeka destekli geliştirme disipliniyle nasıl inşa edildiğini karşılaştırmalı olarak gösterir.
+> Bu üç proje birlikte incelendiğinde; aynı iş probleminin masaüstünden bulut SaaS ortamına kadar üç farklı teknoloji yığınında yapay zeka destekli geliştirme disipliniyle nasıl inşa edildiğini karşılaştırmalı olarak gösterir.
 
 ---
 
